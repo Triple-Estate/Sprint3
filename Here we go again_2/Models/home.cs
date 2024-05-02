@@ -10,6 +10,7 @@
         public string SquareFeet { get; set; }
         public string? Keywords { get; set; }
 
+        public Int16 ContactNumber { get; set; }
         public string HomeType { get; set; }
         public Int16 Room { get; set; }
         public Int16 Floor { get; set; }

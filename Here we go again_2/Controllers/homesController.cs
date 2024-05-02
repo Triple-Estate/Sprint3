@@ -30,7 +30,7 @@ namespace G8CozyMVC.Controllers
         {
             return View(await _context.home.ToListAsync());
         }
-        
+
         // GET: homes/Details/5
         public async Task<IActionResult> Details(int? id)
         {
@@ -48,7 +48,7 @@ namespace G8CozyMVC.Controllers
 
             return View(home);
         }
-        
+
 
         // GET: homes/Create
         public IActionResult Create()
@@ -62,7 +62,7 @@ namespace G8CozyMVC.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
         [Route("create")]
-        public async Task<IActionResult> Create([Bind("Id,Description,Price,YearBuilt,SquareFeet,Keywords,HomeType,Room,Bath,Floor,Image,IsSell,HavePool,HaveOnSiteParking,HavePark")] home home)
+        public async Task<IActionResult> Create([Bind("Id,Description,Price,YearBuilt,SquareFeet,Keywords,HomeType,Room,Bath,Floor,ContactNumber,Image,IsSell,HavePool,HaveOnSiteParking,HavePark")] home home)
         {
 
             _logger.LogInformation($"sorry the you have dont good day");

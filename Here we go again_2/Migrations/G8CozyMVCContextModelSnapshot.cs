@@ -23,242 +23,249 @@ namespace G8CozyMVC.Migrations
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
             modelBuilder.Entity("G8Cozy.Models.agent", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
+            {
+                b.Property<int>("Id")
+                    .ValueGeneratedOnAdd()
+                    .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+                SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<string>("APIKEY")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                b.Property<string>("APIKEY")
+                    .IsRequired()
+                    .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Description")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                b.Property<string>("Description")
+                    .IsRequired()
+                    .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Image")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                b.Property<string>("Image")
+                    .IsRequired()
+                    .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                b.Property<string>("Name")
+                    .IsRequired()
+                    .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("Phone")
-                        .HasColumnType("int");
+                b.Property<int>("Phone")
+                    .HasColumnType("int");
 
-                    b.Property<string>("Type")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                b.Property<string>("Type")
+                    .IsRequired()
+                    .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("Xp")
-                        .HasColumnType("int");
+                b.Property<int>("Xp")
+                    .HasColumnType("int");
 
-                    b.HasKey("Id");
+                b.HasKey("Id");
 
-                    b.ToTable("agent");
-                });
+                b.ToTable("agent");
+            });
 
             modelBuilder.Entity("G8Cozy.Models.agentuser", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
+            {
+                b.Property<int>("Id")
+                    .ValueGeneratedOnAdd()
+                    .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+                SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<string>("AgentId")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                b.Property<string>("AgentId")
+                    .IsRequired()
+                    .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime>("Data")
-                        .HasColumnType("datetime2");
+                b.Property<DateTime>("Data")
+                    .HasColumnType("datetime2");
 
-                    b.Property<string>("UserId")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                b.Property<string>("UserId")
+                    .IsRequired()
+                    .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("status")
-                        .HasColumnType("int");
+                b.Property<int>("status")
+                    .HasColumnType("int");
 
-                    b.HasKey("Id");
+                b.HasKey("Id");
 
-                    b.ToTable("agentuser");
-                });
+                b.ToTable("agentuser");
+            });
 
             modelBuilder.Entity("G8Cozy.Models.home", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
+            {
+                b.Property<int>("Id")
+                    .ValueGeneratedOnAdd()
+                    .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+                SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<short>("Bath")
-                        .HasColumnType("smallint");
+                b.Property<short>("Bath")
+                    .HasColumnType("smallint");
 
-                    b.Property<string>("Description")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                b.Property<string>("Description")
+                    .IsRequired()
+                    .HasColumnType("nvarchar(max)");
 
-                    b.Property<bool>("HaveOnSiteParking")
-                        .HasColumnType("bit");
+                b.Property<bool>("HaveOnSiteParking")
+                    .HasColumnType("bit");
 
-                    b.Property<bool>("HavePark")
-                        .HasColumnType("bit");
+                b.Property<bool>("HavePark")
+                    .HasColumnType("bit");
 
-                    b.Property<bool>("HavePool")
-                        .HasColumnType("bit");
+                b.Property<bool>("HavePool")
+                    .HasColumnType("bit");
 
-                    b.Property<string>("HomeType")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                b.Property<string>("HomeType")
+                    .IsRequired()
+                    .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Image")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                b.Property<string>("Image")
+                    .IsRequired()
+                    .HasColumnType("nvarchar(max)");
 
-                    b.Property<bool>("IsSell")
-                        .HasColumnType("bit");
+                b.Property<bool>("IsSell")
+                    .HasColumnType("bit");
 
-                    b.Property<string>("Keywords")
-                        .HasColumnType("nvarchar(max)");
+                b.Property<string>("Keywords")
+                    .HasColumnType("nvarchar(max)");
 
-                    b.Property<double>("Price")
-                        .HasColumnType("float");
+                b.Property<double>("Price")
+                    .HasColumnType("float");
 
-                    b.Property<short>("Room")
-                        .HasColumnType("smallint");
+                b.Property<short>("Room")
+                    .HasColumnType("smallint");
 
-                    b.Property<short>("Floor")
-                        .HasColumnType("smallint");
+                b.Property<short>("Floor")
+                    .HasColumnType("smallint");
 
-                    b.Property<string>("SquareFeet")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                b.Property<short>("ContactNumber")
+                    .HasColumnType("smallint");
 
-                    b.Property<string>("YearBuilt")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                b.Property<string>("SquareFeet")
+                    .IsRequired()
+                    .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("Id");
+                b.Property<string>("YearBuilt")
+                    .IsRequired()
+                    .HasColumnType("nvarchar(max)");
 
-                    b.ToTable("home");
-                });
+                b.HasKey("Id");
+
+                b.ToTable("home");
+            });
 
             modelBuilder.Entity("G8Cozy.Models.notification", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
+            {
+                b.Property<int>("Id")
+                    .ValueGeneratedOnAdd()
+                    .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+                SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<string>("Msg")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                b.Property<string>("Msg")
+                    .IsRequired()
+                    .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("UserId")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                b.Property<string>("UserId")
+                    .IsRequired()
+                    .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("Id");
+                b.HasKey("Id");
 
-                    b.ToTable("notification");
-                });
+                b.ToTable("notification");
+            });
 
             modelBuilder.Entity("G8Cozy.Models.user", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
+            {
+                b.Property<int>("Id")
+                    .ValueGeneratedOnAdd()
+                    .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+                SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<string>("Code")
-                        .HasColumnType("nvarchar(max)");
+                b.Property<string>("Code")
+                    .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Email")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                b.Property<string>("Email")
+                    .IsRequired()
+                    .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                b.Property<string>("Name")
+                    .IsRequired()
+                    .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Password")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                b.Property<string>("Password")
+                    .IsRequired()
+                    .HasColumnType("nvarchar(max)");
 
-                    b.Property<bool>("type")
-                        .HasColumnType("bit");
+                b.Property<bool>("type")
+                    .HasColumnType("bit");
 
-                    b.HasKey("Id");
+                b.HasKey("Id");
 
-                    b.ToTable("user");
-                });
+                b.ToTable("user");
+            });
 
             modelBuilder.Entity("G8CozyMVC.Models.buy", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
+            {
+                b.Property<int>("Id")
+                    .ValueGeneratedOnAdd()
+                    .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+                SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<short>("Bath")
-                        .HasColumnType("smallint");
+                b.Property<short>("Bath")
+                    .HasColumnType("smallint");
 
-                    b.Property<string>("Description")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                b.Property<string>("Description")
+                    .IsRequired()
+                    .HasColumnType("nvarchar(max)");
 
-                    b.Property<bool>("HaveOnSiteParking")
-                        .HasColumnType("bit");
+                b.Property<bool>("HaveOnSiteParking")
+                    .HasColumnType("bit");
 
-                    b.Property<bool>("HavePark")
-                        .HasColumnType("bit");
+                b.Property<bool>("HavePark")
+                    .HasColumnType("bit");
 
-                    b.Property<bool>("HavePool")
-                        .HasColumnType("bit");
+                b.Property<bool>("HavePool")
+                    .HasColumnType("bit");
 
-                    b.Property<string>("HomeType")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                b.Property<string>("HomeType")
+                    .IsRequired()
+                    .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Image")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                b.Property<string>("Image")
+                    .IsRequired()
+                    .HasColumnType("nvarchar(max)");
 
-                    b.Property<bool>("IsSell")
-                        .HasColumnType("bit");
+                b.Property<bool>("IsSell")
+                    .HasColumnType("bit");
 
-                    b.Property<string>("Keywords")
-                        .HasColumnType("nvarchar(max)");
+                b.Property<string>("Keywords")
+                    .HasColumnType("nvarchar(max)");
 
-                    b.Property<double>("Price")
-                        .HasColumnType("float");
+                b.Property<double>("Price")
+                    .HasColumnType("float");
 
-                    b.Property<short>("Room")
-                        .HasColumnType("smallint");
+                b.Property<short>("Room")
+                    .HasColumnType("smallint");
 
-                    b.Property<short>("Floor")
-                        .HasColumnType("smallint");
+                b.Property<short>("Floor")
+                    .HasColumnType("smallint");
 
-                    b.Property<string>("SquareFeet")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                b.Property<string>("SquareFeet")
+                    .IsRequired()
+                    .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("YearBuilt")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                b.Property<string>("YearBuilt")
+                    .IsRequired()
+                    .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("Id");
+                b.Property<string>("ContactNumber")
+                    .IsRequired()
+                    .HasColumnType("nvarchar(max)");
 
-                    b.ToTable("buy");
-                });
+                b.HasKey("Id");
+
+                b.ToTable("buy");
+            });
 #pragma warning restore 612, 618
         }
     }
