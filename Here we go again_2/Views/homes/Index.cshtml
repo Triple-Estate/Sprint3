@@ -69,6 +69,11 @@
                 <input type="text" id="location" placeholder="location" class="search-input">
             </div>
         </div>
+        <div class="filter">
+            <div class="search-container">
+                <input type="text" id="Floor" placeholder="Floor" class="search-input">
+            </div>
+        </div>
         <!--
         <div class="filter">
             <div class="search-container">
@@ -104,6 +109,7 @@
                 <div id="@item.Id" 
                     data-Bath="@Html.DisplayFor(modelItem => item.Bath)"
                     data-Room="@Html.DisplayFor(modelItem => item.Room)"
+                     data-Floor="@Html.DisplayFor(modelItem => item.Floor)"
                      data-desci="@Html.DisplayFor(modelItem => item.Description)"
                     data-location="@Html.DisplayFor(modelItem => item.HomeType)"
                     data-IsSell="@Html.DisplayFor(modelItem => item.IsSell)"
@@ -190,32 +196,17 @@ else {
             dontadd[1] = Rooms.value == room ? 1 : (Rooms.value == "" ? 1 : 0)
             dontadd[2] = specialties.value == isSale ? 1 : (specialties.value == "-1" ? 1 : 0)
             dontadd[3] = desc.value == des ? 1 : (desc.value == "" ? 1 : 0);
-
             dontadd[4] = location2.value == loc ? 1 : (location2.value == "" ? 1 : 0);
+            dontadd[5] = Floor.value == floor ? 1 : (Floor.value == "" ? 1 : 0)
 
             let k = true;
-            for (let i = 0; i < 5; i++) {
+            for (let i = 0; i < 6; i++) {
                 if (dontadd[i] === 0) {
                     element.classList.add("non");
                 }
             }
 
-            /*
-            // Banyo sayısı kontrolü
-            if (baths.value != bath) {
-                element.classList.add("non");
-            }
-
-            // Oda sayısı kontrolü
-            if (Rooms.value != room) {
-                element.classList.add("non");
-            }
-
-            // Satış durumu kontrolü
-            if (isSale != specialties.value) {
-                element.classList.add("non");
-            }
-            */
+            
             
 
         }

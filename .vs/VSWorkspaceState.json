@@ -1,6 +1,10 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Here we go again_2",
+    "\\Here we go again_2\\Views",
+    "\\Here we go again_2\\Views\\homes"
   ],
+  "SelectedNode": "\\Here we go again_2\\Views\\homes\\Index.cshtml",
   "PreviewInSolutionExplorer": false
 }
